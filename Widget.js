@@ -30,6 +30,9 @@
 */
 
 
+
+async function main() {
+
 let localFm = FileManager.local()
 let cachePath = localFm.documentsDirectory()
 let data;
@@ -153,8 +156,8 @@ reference.textColor=new Color('#ccc');
 Script.setWidget(widget)
 Script.complete()
 widget.presentMedium()
-
-
+}
+  
 }
 
 module.exports = {
