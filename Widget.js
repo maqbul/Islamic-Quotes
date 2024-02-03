@@ -153,18 +153,12 @@ reference.textColor=new Color('#ccc');
 Script.setWidget(widget)
 Script.complete()
 widget.presentMedium()
-}
-
-
-if(!config.runsInWidget){
-widget.presentMedium()
-
-}
-
- 
-Script.setWidget(widget)
-Script.complete()
 
 module.exports = {
   main
 } 
+
+  
+}
+
+
