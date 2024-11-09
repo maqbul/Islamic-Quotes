@@ -98,7 +98,7 @@ reftext.textColor=new Color('#ccc');
     docsElement.url=`whatsapp://send?text=${"''"+quote+"''"+ "\n\n📖\n"+ref}
 
 `
-    
+    docsElement.url=`https://rebrand.ly/iOS-QuotesWidget-shared`
      
 widget.setPadding(5, 10, -24, 10)
  
