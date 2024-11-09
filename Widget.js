@@ -95,10 +95,10 @@ reftext.textColor=new Color('#ccc');
     docsElement.imageSize = new Size(20,30)
     docsElement.tintColor = Color.white()
     docsElement.imageOpacity = 0.6
-    docsElement.url=`whatsapp://send?text=${"''"+quote+"''"+ "\n\n📖\n"+ref}
+  //  docsElement.url=`whatsapp://send?text=${"''"+quote+"''"+ "\n\n📖\n"+ref}
 
 `
-    docsElement.url=`https://rebrand.ly/iOS-QuotesWidget-shared`
+   docsElement.url=`https://rebrand.ly/iOS-QuotesWidget-shared`
      
 widget.setPadding(5, 10, -24, 10)
  
