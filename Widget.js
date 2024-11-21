@@ -3,7 +3,8 @@
 // icon-color: green; icon-glyph: magic;
 /*
 ##########################################################
-  
+ 21/11/24 link added to feedback on widget
+ 
 01/02/23 - Added offline csupport with reditt code, shows a quote as opposed to red error!
 
 * offline support 
