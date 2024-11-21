@@ -3,8 +3,7 @@
 // icon-color: green; icon-glyph: magic;
 /*
 ##########################################################
- 21/11/24 link added to feedback on widget
- 
+  
 01/02/23 - Added offline csupport with reditt code, shows a quote as opposed to red error!
 
 * offline support 
@@ -31,16 +30,14 @@
 */
 
 
+
+async function main() {
+
 let localFm = FileManager.local()
 let cachePath = localFm.documentsDirectory()
 let data;
 let usingCachedData = false;
 let cache = localFm.joinPath(cachePath, "lastread")
-var now = new Date();
-
-
-
-
 
 try {
   log('online')
@@ -69,35 +66,6 @@ let image = await req.loadImage()
 widget.backgroundImage = image
 image.opacity =1  
   
- /* 
-  // Feedback message// 
-widget.addSpacer(14)
-// 
-//
- widget.addStack(0)
-var now = new Date();
-
-
-var todaysDate=now.getDate()
-console.log ('Todays date ' + todaysDate)
-
-if (todaysDate == 12 || todaysDate== 21 || todaysDate== 29 || todaysDate==6){
-  console.log ('it is Todays date ')
-
-  
-  var feedback = widget.addText('              LIKE THE WIDGET?  PLEASE RATE IT - TAP HERE!\n')
-  
-feedback.textColor=new Color('#fff');
-feedback.font = Font.headline()
-feedback.font = Font.lightSystemFont(10); 
-feedback.textOpacity=5
-// 
-// feedback.textOpacity=0.9 //Opacity when displaying msg
-}
-
-widget.url="https://rebrand.ly/Quotes_Widget_feedback" //link to feedbackpage
-
-  */
 let speechmarksOpen='“' 
 let speechmarksClose='”'
 
@@ -146,8 +114,8 @@ Script.setWidget(widget)
 Script.complete()
 
 
+} 
 
-}
 
 
 
@@ -181,7 +149,6 @@ reference.textColor=new Color('#ccc');
 
 
 
-
 //widget.textColor= new Color("#ffffff") 
 //widget.addText(`offline txt`)
 
@@ -190,3 +157,13 @@ Script.setWidget(widget)
 Script.complete()
 widget.presentMedium()
 }
+  
+}
+
+module.exports = {
+  main
+} 
+
+  
+
+
