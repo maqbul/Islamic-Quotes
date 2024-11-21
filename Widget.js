@@ -30,14 +30,16 @@
 */
 
 
-
-async function main() {
-
 let localFm = FileManager.local()
 let cachePath = localFm.documentsDirectory()
 let data;
 let usingCachedData = false;
 let cache = localFm.joinPath(cachePath, "lastread")
+var now = new Date();
+
+
+
+
 
 try {
   log('online')
@@ -65,6 +67,35 @@ let req = new Request ('https://mis-productions.co.uk/apps/widgets_ios/quotes_tr
 let image = await req.loadImage()
 widget.backgroundImage = image
 image.opacity =1  
+  
+  
+  // Feedback message// 
+widget.addSpacer(14)
+// 
+//
+ widget.addStack(0)
+var now = new Date();
+
+
+var todaysDate=now.getDate()
+console.log ('Todays date ' + todaysDate)
+
+if (todaysDate == 12 || todaysDate== 21 || todaysDate== 29 || todaysDate==6){
+  console.log ('it is Todays date ')
+
+  
+  var feedback = widget.addText('              LIKE THE WIDGET?  PLEASE RATE IT - TAP HERE!\n')
+  
+feedback.textColor=new Color('#fff');
+feedback.font = Font.headline()
+feedback.font = Font.lightSystemFont(10); 
+feedback.textOpacity=5
+// 
+// feedback.textOpacity=0.9 //Opacity when displaying msg
+}
+
+widget.url="https://rebrand.ly/Quotes_Widget_feedback" //link to feedbackpage
+
   
 let speechmarksOpen='“' 
 let speechmarksClose='”'
@@ -95,10 +126,10 @@ reftext.textColor=new Color('#ccc');
     docsElement.imageSize = new Size(20,30)
     docsElement.tintColor = Color.white()
     docsElement.imageOpacity = 0.6
-   docsElement.url=`whatsapp://send?text=${"''"+quote+"''"+ "\n\n📖\n"+ref}
+    docsElement.url=`whatsapp://send?text=${"''"+quote+"''"+ "\n\n📖\n"+ref}
 
 `
-   //docsElement.url=`https://rebrand.ly/iOS-QuotesWidget-shared`
+    
      
 widget.setPadding(5, 10, -24, 10)
  
@@ -114,8 +145,8 @@ Script.setWidget(widget)
 Script.complete()
 
 
-} 
 
+}
 
 
 
@@ -149,6 +180,7 @@ reference.textColor=new Color('#ccc');
 
 
 
+
 //widget.textColor= new Color("#ffffff") 
 //widget.addText(`offline txt`)
 
@@ -157,14 +189,3 @@ Script.setWidget(widget)
 Script.complete()
 widget.presentMedium()
 }
-  
-}
-
-module.exports = {
-  main
-} 
-
-  
-
-
-
