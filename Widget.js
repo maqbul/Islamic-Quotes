@@ -69,7 +69,7 @@ let image = await req.loadImage()
 widget.backgroundImage = image
 image.opacity =1  
   
-  
+ /* 
   // Feedback message// 
 widget.addSpacer(14)
 // 
@@ -97,7 +97,7 @@ feedback.textOpacity=5
 
 widget.url="https://rebrand.ly/Quotes_Widget_feedback" //link to feedbackpage
 
-  
+  */
 let speechmarksOpen='“' 
 let speechmarksClose='”'
 
