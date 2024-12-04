@@ -101,7 +101,8 @@ reftext.textColor=new Color('#ccc');
     
      
 widget.setPadding(5, 10, -24, 10)
- 
+
+  widget.url="https://rebrand.ly/Quotes_Widget_feedback" //link to feedbackpage
 
 
 if(!config.runsInWidget){
